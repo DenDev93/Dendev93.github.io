@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenDEV</title>
+    <link rel="icon" href="img/LOGO.ico" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top py-3 bg-light">
+        <div class="container">
+            <img src="img/LOGO.png" alt="Logo" class="navbar-logo">
+            <a class="navbar-brand" href="#"><i> Den</i><i class="text-success">DEV </i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre Mí</a>
+                    </li><!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Habilidades</a>
+                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Colaboraciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planes">Planes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section id="hero" class="hero d-flex align-items-center justify-content-center">
+    <div class="container hero-content text-center text-white">
+        <img src="img/DenDevImagotipo - recortada.png" class="imagotipo img-fluid" alt="DenDEV">
+        <h2 class="animate__animated animate__fadeInUp">Creando experiencias digitales modernas y elegantes.</h2>
+    </div>
+</section>
+
+    <section id="about" class="section">
+        <div class="container text-center">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="profile-card">
+                        <img src="img/tu-foto.JPG" class="img-fluid rounded-circle profile-photo" alt="Foto de perfil">
+                        <h3 class="mt-4">Denis Manuel López Molina</h3>
+                        <h4 class="text-muted">Ingeniero en Sistemas de Informaci&oacute;n</h4>
+                        <h4 class="text-muted">Universidad Nacional Aut&oacute;noma de Nicaragua - UNAN Le&oacute;n</h4>
+                        <h4 class="text-muted">Desarrollador Web Jr</h4>
+                        <p class="lead text-justify mt-4">Soy un desarrollador apasionado por crear soluciones web innovadoras y eficientes. Mi enfoque principal es en la experiencia del usuario (UX) y el diseño de interfaces (UI), asegurando que cada proyecto no solo sea funcional, sino también intuitivo y visualmente atractivo. Siempre estoy aprendiendo nuevas tecnologías y metodologías para mantenerme al día con las últimas tendencias de la industria.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--
+    <section id="skills" class="section skills-section bg-light py-5">
+        <div class="container">
+            <h2 class="section-title mb-5 pb-2 position-relative text-center">Habilidades</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card p-4 h-100 shadow-sm border-0 border-top border-primary border-5 skill-category">
+                        <h3 class="h5 fw-bold mb-4 text-dark"><i class="bi bi-code-slash me-3 text-primary"></i> Desarrollo Web & Programación</h3>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Frontend:</span>
+                                <span class="skill-items text-secondary">HTML5, CSS3 (Sass, Less), JavaScript (ES6+), React.js, Vue.js, Angular</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Backend:</span>
+                                <span class="skill-items text-secondary">Node.js (Express), Python (Django, Flask), PHP (Laravel), Java (Spring Boot)</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Frameworks/Librerías:</span>
+                                <span class="skill-items text-secondary">Bootstrap, Tailwind CSS, jQuery</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Control de Versiones:</span>
+                                <span class="skill-items text-secondary">Git, GitHub</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card p-4 h-100 shadow-sm border-0 border-top border-primary border-5 skill-category">
+                        <h3 class="h5 fw-bold mb-4 text-dark"><i class="bi bi-database-fill me-3 text-primary"></i> Administración de Bases de Datos</h3>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Relacionales:</span>
+                                <span class="skill-items text-secondary">MySQL, MariaDB, PostgreSQL, SQL Server, Oracle, PLSql</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">No Relacionales (NoSQL):</span>
+                                <span class="skill-items text-secondary">MongoDB, Firebase Firestore</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">ORM/ODM:</span>
+                                <span class="skill-items text-secondary">Sequelize, Mongoose, SQLAlchemy</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card p-4 h-100 shadow-sm border-0 border-top border-primary border-5 skill-category">
+                        <h3 class="h5 fw-bold mb-4 text-dark"><i class="bi bi-brush-fill me-3 text-primary"></i> Diseño Gráfico</h3>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Herramientas:</span>
+                                <span class="skill-items text-secondary">Adobe Photoshop, Adobe Illustrator, Figma, Sketch, Entre Otros</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Conceptos:</span>
+                                <span class="skill-items text-secondary">Diseño UI/UX, Principios de Diseño, Tipografía, Teoría del Color, Identidad de Marca, Imagen Corporativa</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card p-4 h-100 shadow-sm border-0 border-top border-primary border-5 skill-category">
+                        <h3 class="h5 fw-bold mb-4 text-dark"><i class="bi bi-gear-fill me-3 text-primary"></i> Metodologías & Otros</h3>
+                        <ul class="list-unstyled text-start">
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Metodologías Ágiles:</span>
+                                <span class="skill-items text-secondary">Scrum, Kanban</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">API RESTful:</span>
+                                <span class="skill-items text-secondary">Diseño y consumo de APIs RESTful</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Optimización:</span>
+                                <span class="skill-items text-secondary">Optimización de Rendimiento Web</span>
+                            </li>
+                            <li class="mb-2 py-2 px-3 bg-light rounded shadow-sm d-flex flex-column align-items-start">
+                                <span class="skill-sub-category-title text-dark fw-bold mb-1">Testing:</span>
+                                <span class="skill-items text-secondary">Debugging & Testing (Unitarias, Integración)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!--<section id="skills" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Manejo de Tecnologías</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="skill-category-container">
+                        <h4 class="skill-category-title mb-3">Tecnologías Front-end</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Astro</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-container mt-4">
+                        <h4 class="skill-category-title mb-3">Tecnologías Back-end</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="skill-tag">PHP - MVC (Modelo - Vista - Controlador)</span>
+                            <span class="skill-tag">PHP (Laravel, Symfony)</span>
+                            <span class="skill-tag">API REST FULL</span>
+                            <span class="skill-tag">Java (Spring Boot)</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">MySQL - MariaDB</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-container mt-4">
+                        <h3 class="skill-category-title">Herramientas de Despliegue y DevOps</h3>
+                        <div>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Heroku</span>
+                            <span class="skill-tag">Netlify</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-container mt-4">
+                        <h3 class="skill-category-title">Herramientas de Dise&ntilde;o</h3>
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <span class="skill-tag">UX/UI</span>
+                            <span class="skill-tag">Adobe Illustrator</span>
+                            <span class="skill-tag">Adobe InDesign</span>
+                            <span class="skill-tag">Adobe Photoshop</span>
+                            <span class="skill-tag">Adobe Premiere Pro</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Adobe After Effects</span>
+                            <span class="skill-tag">Adobe Audition</span>
+                            <span class="skill-tag">Adobe Color</span>
+                            <span class="skill-tag">Photopea</span>
+                            <span class="skill-tag">DaVinci Resolve</span>
+                            <span class="skill-tag">Canva</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">GIMP</span>
+                            <span class="skill-tag">Inkscape</span>
+                        </div>
+                    </div>
+                    <div class="skill-category-container mt-4">
+                        <h3 class="skill-category-title">Herramientas de Gesti&oacute;n y Colaboraci&oacute;n</h3>
+                        <div>
+                            <span class="skill-tag">Notion</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Trello</span>              
+                        </div>
+                    </div>
+                    <div class="skill-category-container mt-4">
+                        <h3 class="skill-category-title">Herramientas de Gesti&oacute;n de Contenido</h3>
+                        <div>
+                            <span class="skill-tag">WordPress</span>
+                            <span class="skill-tag">Joomla</span>
+                            <span class="skill-tag">Drupal</span>
+                            <span class="skill-tag">WebFlow</span>              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <section id="portfolio" class="section portfolio-section py-5">
+        <div class="container">
+            <h2 class="section-title mb-5 pb-2 position-relative text-center">Mis Colaboraciones</h2>
+            <p class="section-subtitle text-secondary mb-5 text-center">Una muestra de los proyectos en los que he sido partícipe.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item">
+                        <img src="img/concierge.png" class="card-img-top border-bottom border-primary border-4" alt="ConciergeHotline.net">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark">ConciergeHotline | Proyecto Web</h3>
+                            <p class="card-text text-secondary mb-4 flex-grow-1">Desarrollado con HTML5, CSS3, JAVASCRIPT Incluye pasarela de pagos y sistema de reserva.</p>
+                            <a href="https://conciergehotline.net/" target="_blank" class="btn btn-primary custom-project-link mt-auto">Ver Proyecto <i class="fas fa-external-link-alt ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item">
+                        <img src="img/travel.png" class="card-img-top border-bottom border-primary border-4" alt="TravelVIPmiami.com">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark">TravelVIP miami | Proyecto Web</h3>
+                            <p class="card-text text-secondary mb-4 flex-grow-1">Desarrollado con HTML5, CSS3, JAVASCRIPT Incluye, Catalogo de Servicios, pasarela de pagos, sistema de reserva.</p>
+                            <a href="https://www.travelvipmiami.com/" target="_blank" class="btn btn-primary custom-project-link mt-auto">Ver Proyecto <i class="fas fa-external-link-alt ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item">
+                        <img src="img/hrd.png" class="card-img-top border-bottom border-primary border-4" alt="Hotel Room Decoration">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark">Hotel Room Decoration | Proyecto Web</h3>
+                            <p class="card-text text-secondary mb-4 flex-grow-1">Desarrollado con HTML5, CSS3, JAVASCRIPT Incluye, Catalogo de Servicios, pasarela de pagos, sistema de reserva.</p>
+                            <a href="https://hotelroomdecoration.com/" target="_blank" class="btn btn-primary custom-project-link mt-auto">Ver Proyecto <i class="fas fa-external-link-alt ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="planes" class="section portfolio-section py-5">
+        <div class="container">
+            <h2 class="section-title mb-2 pb-2 position-relative text-center">Planes</h2>
+            <p class="section-subtitle text-secondary text-center">En esta secci&oacute;n se muestran los planes que podr&iacute;an ser lo que buscas para el proyecto que tengas en mente.</p>
+            <p class="section-subtitle text-secondary mb-5 text-center">¡Explora cada uno!</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-12 ">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item bg-success">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark text-white text-center">Plan B&aacute;sico</h3>
+                            <h4 class="text-center text-white">Desde: US$ 200</h4>
+                            <a href="#contact" target="_blank" class="btn btn-dark mb-2">Cont&aacute;ctame <i class="bi bi-chat-dots-fill"></i></a>
+                            <p class="text-white">Incluye:</p>
+                            <ul class="text-white list-unstyled ps-3">
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Una sola P&aacute;gina</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Diseño Moderno</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Llamado a la Acci&oacute;n</li>
+                                <li><i class="bi bi-check-circle-fill me-2"></i>Formulario b&aacute;sico de contacto</li>
+                            </ul>
+                            
+                            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPlanBasico" id="btnAbrirPlanBasico">
+                                Detalles del Plan
+                                <i class="bi bi-file-earmark-font-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item bg-dark">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark text-white text-center">Plan Pro</h3>
+                            <h4 class="text-center text-white">Desde: $ 400</h4>
+                            <a href="#contact" target="_blank" class="btn btn-success mb-2">Cont&aacute;ctame <i class="bi bi-chat-dots-fill"></i></a>
+                            <p class="text-white fw-bold">Incluye:</p>
+        <ul class="text-white list-unstyled ps-3">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Hasta 5 P&aacute;ginas</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Diseño Organizado</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Galeria Profesional</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Estructura Optimizada y Personalizada</li>
+        </ul>
+                            
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModalPlanPro" id="btnAbrirPlanPro">
+                                Detalles del Plan
+                                <i class="bi bi-file-earmark-font-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item bg-secondary">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark text-white text-center">Plan Premium</h3>
+                            <h4 class="text-center text-white">Desde: $ 700</h4>
+                            <a href="#contact" target="_blank" class="btn btn-dark mb-2">Cont&aacute;ctame <i class="bi bi-chat-dots-fill"></i></a>
+                            <p class="text-white fw-bold">Incluye:</p>
+        <ul class="text-white list-unstyled ps-3">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Hasta 10 P&aacute;ginas</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Diseño 100% Exclusivo</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Elementos Interactivos</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Experiencia de Marca Única</li>
+        </ul>
+                            
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#ModalPlanPremium" id="btnAbrirPlanPremium">
+                                Detalles del Plan
+                                <i class="bi bi-file-earmark-font-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card h-100 shadow-sm border-0 portfolio-item bg-warning">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5 fw-bold text-dark text-center">Plan Gold</h3>
+                            <h4 class="text-center">Desde: $ 1500</h4>
+                            <a href="#contact" target="_blank" class="btn btn-dark mb-2">Cont&aacute;ctame <i class="bi bi-chat-dots-fill"></i></a>
+                            <p class="text-dark fw-bold">Incluye:</p>
+        <ul class="text-dark list-unstyled ps-3">
+            <li><i class="bi bi-check-circle-fill me-2"></i>Plataforma Completa</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Sistema a la Medida</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Panel Administrativo</li>
+            <li><i class="bi bi-check-circle-fill me-2"></i>Gestión de Usuarios y Roles</li>
+        </ul>
+                            
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalPlanGold" id="btnAbrirPlanGold">
+                                Detalles del Plan
+                                <i class="bi bi-file-earmark-font-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="section contact-section">
+        <div class="container text-center">
+            <p class="section-subtitle">¡Hablemos de tu próximo proyecto! Llena el formulario o usa los enlaces directos de mis redes sociales a continuación.</p>
+            <h2 class="section-title">Formulario de Contacto</h2>
+                <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <form id="contactForm" action="https://formspree.io/f/xzzanjjb" method="POST" class="needs-validation text-start border-4" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="name" class="form-label text-white">Tu Nombre</label>
+                                <input type="text" class="form-control form-control-lg bg-dark text-white border-0" id="name" name="name" autocomplete="off" placeholder="nombre aquí" required>
+                                <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="phone" class="form-label text-white">Tu Tel&eacute;fono</label>
+                                <input type="text" class="form-control form-control-lg bg-dark text-white border-0" id="phone" name="phone" autocomplete="off" placeholder="Teléfono aquí" required>
+                                <div class="invalid-feedback">Por favor, ingresa un Tel&eacute;fono válido.</div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email" class="form-label text-white">Tu Correo Electr&oacute;nico</label>
+                                <input type="email" class="form-control form-control-lg bg-dark text-white border-0" id="email" name="email" autocomplete="off" placeholder="correo aquí" required>
+                                <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label text-white">Asunto</label>
+                                <input type="text" class="form-control form-control-lg bg-dark text-white border-0" id="subject" name="subject" autocomplete="off" placeholder="asunto aquí" required>
+                                <div class="invalid-feedback">Por favor, ingresa el asunto del mensaje.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label text-white">Mensaje</label>
+                                <textarea class="form-control form-control-lg bg-dark text-white border-0" id="message" name="message" rows="5" autocomplete="off" placeholder="Cuerpo del mensaje aquí" required></textarea>
+                                <div class="invalid-feedback">Por favor, ingresa tu mensaje.</div>
+                            </div>
+                            <div class="col-12 text-center mt-5">
+                                <button type="submit" class="btn custom-btn btn-lg w-100 text-white" id="submitButton">Enviar Mensaje</button>
+                                <div id="formStatus" class="mt-3 text-white"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <hr>
+                <h3 class="text-white">Otros Medios de Contacto</h3>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="mailto:lopezmolinadm293@gmail.com" class="card text-center text-white bg-secondary border-0 contact-item h-100 p-4 shadow">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-envelope"></i> 
+                            <span class="h5 fw-bold">Correo Electrónico</span>
+                            <p class="mb-0 text-white-75 small">lopezmolinadm293@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="https://wa.me/+50588297552" target="_blank" class="card text-center text-white bg-secondary border-0 contact-item h-100 p-4 shadow">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-whatsapp"></i> 
+                            <span class="h5 fw-bold">WhatsApp</span>
+                            <p class="mb-0 text-white-75 small">+505 88297552</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="https://www.facebook.com/share/14JUjfuk4ew/?mibextid=qi2Omg" target="_blank" class="card text-center text-white bg-secondary border-0 contact-item h-100 p-4 shadow">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-facebook"></i> 
+                            <span class="h5 fw-bold">Facebook</span>
+                            <p class="mb-0 text-white-75 small">Denis Manuel López Molina</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <a href="https://www.linkedin.com/in/denis-manuel-lopez-molina-80b992317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="card text-center text-white bg-secondary border-0 contact-item h-100 p-4 shadow">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-linkedin"></i> 
+                            <span class="h5 fw-bold">LinkedIn</span>
+                            <p class="mb-0 text-white-75 small">Denis Manuel López Molina</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-white py-4">
+        <div class="container text-center">
+            <p class="mb-3">&copy; <span id="current-year"></span> DenDEV. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODEL PLAN BASICO -->
+<div class="modal fade" id="ModalPlanBasico" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h1 class="modal-title fs-5  text-white text-center" id="exampleModalLabel">Detalles de Plan Báscio</h1>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<!--INCIO DEL CUERPO DE LA MODAL DE PLAN BASICO-->
+<div class="container-fluid p-0">
+    <h1 class="fs-3 fw-bold text-dark mb-4 border-bottom border-2 border-secondary pb-2">
+        Plan Básico: Tu Inicio en la Web
+    </h1>
+    <div class="mb-5 p-4 bg-primary-subtle border-start border-4 border-primary rounded-3">
+        <h2 class="fs-5 fw-bold text-primary-emphasis mb-3">Puntos Clave</h2>
+        <ul class="text-secondary list-unstyled p-0">
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary fw-bold flex-shrink-0" style="width: 160px;">Ideal para:</span>
+                <span class="ms-2">Emprendedores y negocios que necesitan una **primera presencia online**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary fw-bold flex-shrink-0" style="width: 160px;">Beneficios Clave:</span>
+                <span class="ms-2">Rápida visibilidad, **bajo costo inicial**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary fw-bold flex-shrink-0" style="width: 160px;">Alcance del Plan:</span>
+                <span class="ms-2">Diseño de una **página única (Landing Page)**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary fw-bold flex-shrink-0" style="width: 160px;">Proceso:</span>
+                <span class="ms-2">Colaboración clara con plazos definidos.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary fw-bold flex-shrink-0" style="width: 160px;">Costos Adicionales:</span>
+                <span class="ms-2">Dominio y Hosting (no incluidos).</span>
+            </li>
+        </ul>
+    </div>
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-3">Detalles del Plan</h2>
+        <p class="text-secondary text-justify">
+            Este plan está diseñado como un trampolín para negocios nuevos o proyectos que buscan una **"tarjeta de presentación" digital**. Es la opción perfecta si necesitas una presencia rápida y funcional sin una inversión alta.
+        </p>
+    </section>
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4">Ventajas y Beneficios</h2>
+        <ul class="list-unstyled ps-3 text-secondary">
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Aterrizar en Internet rápidamente: En pocos días tendrás una página profesional que te represente.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Captar clientes potenciales: El diseño está enfocado en convertir a los visitantes en contactos.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Generar credibilidad: Una página web bien diseñada te hace ver más serio y confiable.</span>
+            </li>
+        </ul>
+    </section>
+    <section class="mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Acerca del Costo</h3>
+                <p class="text-secondary">
+                    El precio de **US$ 200** es el punto de partida. Este costo inicial cubre la creación de una página simple con el contenido que tú proveas. El precio puede ajustarse si requieres funcionalidades adicionales, como una galería de fotos más grande o un formulario con campos personalizados.
+                </p>
+            </div>
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Alcance y Contenido</h3>
+                <p class="text-secondary">
+                    Con este plan, te entrego una **Landing Page de una sola sección**, que incluye: un formulario de contacto simple, enlaces a tus redes sociales, un diseño adaptable (se ve bien en cualquier dispositivo), y un llamado a la acción claro. El diseño es limpio y directo.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Proceso de Trabajo y Responsabilidades</h2>
+        <div class="bg-info-subtle p-4 rounded-3 mb-4 border border-info-subtle">
+            <h3 class="fs-6 fw-bold text-info-emphasis mb-2">Responsabilidades del Cliente</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Deberás proporcionarme todo el contenido (textos, fotos, logo) en un solo plazo.</li>
+                <li>La comunicación inicial se realizará a través de una reunión virtual o presencial para definir los detalles.</li>
+                <li>Se establecerá una fecha de entrega única para el producto final.</li>
+            </ul>
+        </div>
+        <div class="bg-success-subtle p-4 rounded-3 border border-success-subtle">
+            <h3 class="fs-6 fw-bold text-success-emphasis mb-2">Responsabilidades del Desarrollador</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Te enviaré avances del diseño para tu aprobación.</li>
+                <li>Una vez aprobado, me encargo de la implementación y te entregaré la página funcional.</li>
+                <li>Se te proporcionará un documento básico con los detalles técnicos del proyecto.</li>
+            </ul>
+        </div>
+    </section>
+    <section class="mb-3">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Información Clave y Condiciones</h2>
+        <div class="alert alert-danger mb-4" role="alert">
+            <h3 class="fw-bold fs-6 mb-1">⚠️ Importante: Cambios, Calidad de Materiales y Costos</h3>
+            <p class="small mb-0">
+                Cualquier cambio o adición a lo acordado inicialmente se cotizará por separado, ya que modifica el alcance del proyecto. Además, es crucial que las imágenes que proporciones sean de la mejor calidad posible y acordes al objetivo del proyecto. De no ser así, se deberá subcontratar a un diseñador gráfico, lo que implicará un costo adicional al presupuesto inicial.
+                <br><br>
+                **Dominio y Hosting:** El pago y la gestión del dominio y hosting corren **por cuenta del cliente**. Esto es un beneficio clave, ya que te otorga el **control total** sobre tus activos digitales y tus credenciales de acceso, asegurando tu independencia futura y la portabilidad de tu proyecto.
+            </p>
+        </div>
+        <div class="p-4 bg-light rounded-3 border border-secondary">
+            <h3 class="fw-bold text-dark fs-6 mb-1">Condiciones de Pago</h3>
+            <p class="text-secondary mb-0">
+                Para este plan, el pago es **único** y se realiza en efectivo o por transferencia al momento de firmar el contrato.
+            </p>
+        </div>
+    </section>
+</div>
+<!-- FIN DEL CUERPO DE LA MODAL BASICO -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- MODEL PLAN PRO -->
+<div class="modal fade" id="ModalPlanPro" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h1 class="modal-title fs-5  text-white text-center" id="exampleModalLabel">Detalles de Plan Pro</h1>
+        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- INICIO DEL CUERPO DE LA MODAL PLAN PROFESIONAL -->
+        <div class="container-fluid p-0">
+
+    <!-- Título Principal del Plan -->
+    <h1 class="fs-3 fw-bold text-dark mb-4 border-bottom border-2 border-warning pb-2">
+        Plan Profesional: Tu Web Completa
+    </h1>
+
+    <!-- Sección de Puntos Clave (Ficha Rápida) -->
+    <div class="mb-5 p-4 bg-warning-subtle border-start border-4 border-warning rounded-3">
+        <h2 class="fs-5 fw-bold text-dark mb-3">Puntos Clave</h2>
+        <ul class="text-secondary list-unstyled p-0">
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-warning-emphasis fw-bold flex-shrink-0" style="width: 160px;">Ideal para:</span>
+                <span class="ms-2">PYMES y negocios establecidos que buscan **más secciones, más alcance**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-warning-emphasis fw-bold flex-shrink-0" style="width: 160px;">Beneficios Clave:</span>
+                <span class="ms-2">Mayor credibilidad, **posicionamiento de marca**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-warning-emphasis fw-bold flex-shrink-0" style="width: 160px;">Alcance del Plan:</span>
+                <span class="ms-2">Hasta **5 páginas** (Inicio, Servicios, Acerca de, Contacto y Galeria).</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-warning-emphasis fw-bold flex-shrink-0" style="width: 160px;">Proceso:</span>
+                <span class="ms-2">Avances por etapas y comunicación constante.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-warning-emphasis fw-bold flex-shrink-0" style="width: 160px;">Costos Adicionales:</span>
+                <span class="ms-2">Dominio y Hosting (no incluidos).</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Detalles del Plan y Propósito -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-3">Detalles del Plan</h2>
+        <p class="text-secondary">
+            Este plan está diseñado para negocios que necesitan una **plataforma más sólida y completa**. Te permite mostrar tus servicios de manera organizada, construir una galeria para atraer y conectar con tus clientes.
+        </p>
+    </section>
+
+    <!-- Ventajas y Beneficios -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4">Ventajas y Beneficios</h2>
+        <ul class="list-unstyled ps-3 text-secondary">
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Ampliar tu presencia online: Tener múltiples páginas te ayuda a **posicionarte mejor en los buscadores (SEO)**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Generar confianza: Un sitio con secciones bien definidas (Acerca de, Servicios) **proyecta profesionalismo**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Muestra a tus clientes: Una Galeria te permite **compartir visualmente tu contenido y conectar con tu audiencia**.</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Acerca del Costo y Alcance -->
+    <section class="mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Acerca del Costo</h3>
+                <p class="text-secondary">
+                    El precio inicial de **US$ 400 a US$ 600** cubre la creación de un sitio de hasta 5 páginas. Este precio es flexible y puede aumentar si necesitas más páginas, galerías de fotos más grandes o funcionalidades adicionales que no estén en la lista inicial.
+                </p>
+            </div>
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Alcance y Contenido</h3>
+                <p class="text-secondary">
+                    El producto final será un sitio web de **hasta 5 páginas** con un diseño adaptable y profesional. Las funcionalidades básicas incluyen un formulario de contacto, galerías y enlaces a redes sociales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo y Responsabilidades -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Proceso de Trabajo y Responsabilidades</h2>
+
+        <!-- Responsabilidades del Cliente -->
+        <div class="bg-info-subtle p-4 rounded-3 mb-4 border border-info-subtle">
+            <h3 class="fs-6 fw-bold text-info-emphasis mb-2">Responsabilidades del Cliente</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Deberás proveer todo el contenido en un plazo acordado.</li>
+                <li>Se realizarán reuniones virtuales para definir la estructura del sitio.</li>
+            </ul>
+        </div>
+
+        <!-- Responsabilidades del Desarrollador -->
+        <div class="bg-success-subtle p-4 rounded-3 border border-success-subtle">
+            <h3 class="fs-6 fw-bold text-success-emphasis mb-2">Responsabilidades del Desarrollador</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Se entregarán avances del diseño de cada página para tu aprobación.</li>
+                <li>Al finalizar, te entregaré el producto listo para usar y un documento con los detalles de la configuración.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Aviso Importante y Condiciones de Pago (Destacado) -->
+    <section class="mb-3">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Información Clave y Condiciones</h2>
+        
+        <!-- Aviso Importante -->
+        <div class="alert alert-danger mb-4" role="alert">
+            <h3 class="fw-bold fs-6 mb-1">⚠️ Importante: Cambios, Calidad de Materiales y Costos</h3>
+            <p class="small mb-2">
+                Cualquier idea nueva o cambio en el diseño o funcionalidades una vez iniciado el proyecto será evaluado y cotizado por separado, ajustando el precio final. Además, es crucial que las imágenes que proporciones sean de la mejor calidad posible y acordes al objetivo del proyecto. De no ser así, se deberá subcontratar a un diseñador gráfico, lo que implicará un costo adicional al presupuesto inicial.
+            </p>
+             <p class="small mb-0">
+                **Dominio y Hosting:** El pago y la gestión del dominio y hosting corren **por cuenta del cliente**. Esto es un beneficio clave, ya que te otorga el **control total** sobre tus activos digitales y tus credenciales de acceso, asegurando tu independencia futura y la portabilidad de tu proyecto.
+            </p>
+        </div>
+
+        <!-- Condiciones de Pago -->
+        <div class="p-4 bg-light rounded-3 border border-secondary">
+            <h3 class="fw-bold text-dark fs-6 mb-1">Condiciones de Pago</h3>
+            <p class="text-secondary mb-0">
+                Para este plan, se solicita un adelanto del **50%** al momento de firmar el contrato. El **50% restante** se paga al finalizar la entrega y aprobación del proyecto.
+            </p>
+        </div>
+    </section>
+</div>
+        <!-- FIN DEL CUERPO DE LA MODAL PLAN PROFESIONAL -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- MODEL PLAN PREMIUM -->
+<div class="modal fade" id="ModalPlanPremium" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-secondary">
+        <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">Detalles de Plan Premium</h1>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- INICIO DEL CUERPO DE LA MODAL PLAN PREMIUM -->
+        <div class="container-fluid p-0">
+
+    <!-- Título Principal del Plan -->
+    <h1 class="fs-3 fw-bold text-dark mb-4 border-bottom border-2 border-secondary pb-2">
+        Plan Premium: Tu Marca Personalizada
+    </h1>
+
+    <!-- Sección de Puntos Clave (Ficha Rápida) -->
+    <div class="mb-5 p-4 bg-secondary-subtle border-start border-4 border-secondary rounded-3">
+        <h2 class="fs-5 fw-bold text-dark mb-3">Puntos Clave</h2>
+        <ul class="text-secondary list-unstyled p-0">
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-secondary-emphasis fw-bold flex-shrink-0" style="width: 160px;">Ideal para:</span>
+                <span class="ms-2">Marcas y empresas que necesitan un **diseño único y avanzado**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-secondary-emphasis fw-bold flex-shrink-0" style="width: 160px;">Beneficios Clave:</span>
+                <span class="ms-2">Diseño exclusivo, mayor interactividad, se diferencia de la competencia.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-secondary-emphasis fw-bold flex-shrink-0" style="width: 160px;">Alcance del Plan:</span>
+                <span class="ms-2">Hasta **10 páginas** con diseño y funcionalidades personalizadas.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-secondary-emphasis fw-bold flex-shrink-0" style="width: 160px;">Proceso:</span>
+                <span class="ms-2">Proceso de diseño y desarrollo en fases.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-secondary-emphasis fw-bold flex-shrink-0" style="width: 160px;">Costos Adicionales:</span>
+                <span class="ms-2">Dominio y Hosting (no incluidos).</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Detalles del Plan y Propósito -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-3">Detalles del Plan</h2>
+        <p class="text-secondary">
+            Este plan está pensado para empresas que quieren una página web que no se parezca a ninguna otra. El enfoque es crear una **experiencia de usuario única** a través de un diseño personalizado, animaciones sutiles y funcionalidades a la medida.
+        </p>
+    </section>
+
+    <!-- Ventajas y Beneficios -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4">Ventajas y Beneficios</h2>
+        <ul class="list-unstyled ps-3 text-secondary">
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Diseño que te diferencia: El sitio es creado desde cero, reflejando **100% la identidad de tu marca**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Mayor interacción: Incluye **funcionalidades más avanzadas** para mantener a tus clientes enganchados.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Autoridad de marca: Un diseño personalizado proyecta una imagen de **profesionalismo y seriedad**.</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Acerca del Costo y Alcance -->
+    <section class="mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Acerca del Costo</h3>
+                <p class="text-secondary">
+                    El precio de **US$ 700 a US$ 1,200** es el punto de partida. Este costo es mayor porque el proceso de diseño y desarrollo es más largo y complejo. El precio final dependerá de la cantidad de páginas y de las funcionalidades que desees incluir (por ejemplo, si quieres un sistema de reservas más complejo o un portafolio interactivo).
+                </p>
+            </div>
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Alcance y Contenido</h3>
+                <p class="text-secondary">
+                    El producto final será un sitio web de **hasta 10 páginas** con un diseño totalmente personalizado. Incluye todas las funcionalidades de los planes anteriores, además de animaciones, un blog más avanzado, un portafolio interactivo, y otros elementos a la medida.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo y Responsabilidades -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Proceso de Trabajo y Responsabilidades</h2>
+
+        <!-- Responsabilidades del Cliente -->
+        <div class="bg-info-subtle p-4 rounded-3 mb-4 border border-info-subtle">
+            <h3 class="fs-6 fw-bold text-info-emphasis mb-2">Responsabilidades del Cliente</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>La colaboración es clave. Proporcionarás el contenido y participarás en la toma de decisiones del diseño.</li>
+                <li>Las entregas se harán por fases para tu revisión.</li>
+            </ul>
+        </div>
+
+        <!-- Responsabilidades del Desarrollador -->
+        <div class="bg-success-subtle p-4 rounded-3 border border-success-subtle">
+            <h3 class="fs-6 fw-bold text-success-emphasis mb-2">Responsabilidades del Desarrollador</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Se te proporcionarán maquetas del diseño y del flujo de usuario para tu aprobación.</li>
+                <li>Se te entregará el proyecto en etapas, junto con la documentación técnica y una guía básica de uso.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Aviso Importante y Condiciones de Pago (Destacado) -->
+    <section class="mb-3">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Información Clave y Condiciones</h2>
+        
+        <!-- Aviso Importante -->
+        <div class="alert alert-danger mb-4" role="alert">
+            <h3 class="fw-bold fs-6 mb-1">⚠️ Importante: Cambios, Calidad de Materiales y Costos</h3>
+            <p class="small mb-2">
+                Cualquier cambio o solicitud de nuevas funcionalidades que surjan durante el proceso, una vez iniciado el desarrollo, tendrá un costo adicional, ya que implica un cambio en la estructura del proyecto. Además, es crucial que las imágenes que proporciones sean de la mejor calidad posible y acordes al objetivo del proyecto. De no ser así, se deberá subcontratar a un diseñador gráfico, lo que implicará un costo adicional al presupuesto inicial.
+            </p>
+             <p class="small mb-0">
+                **Dominio y Hosting:** El pago y la gestión del dominio y hosting corren **por cuenta del cliente**. Esto es un beneficio clave, ya que te otorga el **control total** sobre tus activos digitales y tus credenciales de acceso, asegurando tu independencia futura y la portabilidad de tu proyecto.
+            </p>
+        </div>
+
+        <!-- Condiciones de Pago -->
+        <div class="p-4 bg-light rounded-3 border border-secondary">
+            <h3 class="fw-bold text-dark fs-6 mb-1">Condiciones de Pago (Por Hitos)</h3>
+            <p class="text-secondary mb-0">
+                Para que te sientas cómodo y yo también, propongo un sistema de pagos por hitos:
+                <ul class="list-unstyled ms-3 mt-2 small text-dark">
+                    <li>**40% Adelanto:** Al inicio del proyecto y firma del contrato.</li>
+                    <li>**30% Hito Intermedio:** A la mitad del desarrollo, cuando se apruebe la estructura y el diseño de las páginas.</li>
+                    <li>**30% Final:** A la entrega final y aprobación completa del proyecto.</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+</div>
+        <!-- FIN DEL CUERPO DE LA MODAL PLAN PREMIUM -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- MODEL PLAN GOLD -->
+<div class="modal fade" id="ModalPlanGold" tabindex="-1" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Detalles de Plan Gold</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- INICIO DEL CUERPO DE LA MODAL PLAN GOLD -->
+        <div class="container-fluid p-0">
+
+    <!-- Título Principal del Plan -->
+    <h1 class="fs-3 fw-bold text-dark mb-4 border-bottom border-2 border-primary pb-2">
+        Plan Gold: Tu Plataforma Digital a Medida
+    </h1>
+
+    <!-- Sección de Puntos Clave (Ficha Rápida) -->
+    <div class="mb-5 p-4 bg-primary-subtle border-start border-4 border-primary rounded-3">
+        <h2 class="fs-5 fw-bold text-dark mb-3">Puntos Clave</h2>
+        <ul class="text-secondary list-unstyled p-0">
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary-emphasis fw-bold flex-shrink-0" style="width: 120px;">Ideal para:</span>
+                <span class="ms-2">E-commerce y proyectos que requieren **funcionalidades complejas**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary-emphasis fw-bold flex-shrink-0" style="width: 120px;">Beneficios Clave:</span>
+                <span class="ms-2">Automatización, gestión de usuarios, **escalabilidad**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary-emphasis fw-bold flex-shrink-0" style="width: 120px;">Alcance del Plan:</span>
+                <span class="ms-2">Desarrollo de un **sistema web completo** (tienda online, panel de control, etc.).</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary-emphasis fw-bold flex-shrink-0" style="width: 120px;">Proceso:</span>
+                <span class="ms-2">Desarrollo ágil, entregas por fases y reuniones periódicas.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="text-primary-emphasis fw-bold flex-shrink-0" style="width: 120px;">Costos Adicionales:</span>
+                <span class="ms-2">Dominio y Hosting de alta capacidad.</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Detalles del Plan y Propósito -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-3">Detalles del Plan</h2>
+        <p class="text-secondary">
+            Este es el plan más avanzado y completo. Está diseñado para clientes que necesitan una plataforma con **funcionalidades complejas**, como una tienda en línea para vender sus productos, un panel de administración para gestionar contenidos, o un sistema de gestión de usuarios. Este no es un simple sitio web, sino un **sistema digital hecho a la medida** de tus necesidades.
+        </p>
+    </section>
+
+    <!-- Ventajas y Beneficios -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4">Ventajas y Beneficios</h2>
+        <ul class="list-unstyled ps-3 text-secondary">
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Automatizar procesos: Gestiona tus ventas, inventario y clientes **desde un solo lugar**.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Mayor control: Un panel de administración te da **control total** sobre tu sitio y contenidos.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <svg class="text-success me-2 flex-shrink-0 mt-1" style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Escalabilidad: La plataforma está diseñada para **crecer junto con tu negocio** sin límites técnicos.</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Acerca del Costo y Alcance -->
+    <section class="mb-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Acerca del Costo</h3>
+                <p class="text-secondary">
+                    El precio de **US$1,500 en adelante** es solo el punto de partida. El costo de este plan se determina después de una **cotización personalizada**, ya que los precios varían enormemente dependiendo de la complejidad del proyecto (base de datos, panel de administración, manejo de usuarios, etc.).
+                </p>
+            </div>
+            <div class="col">
+                <h3 class="fs-5 fw-bold text-dark mb-3 border-bottom border-secondary pb-1">Alcance y Contenido</h3>
+                <p class="text-secondary">
+                    El producto final es una **plataforma web completa**, la cual puede incluir: una tienda online, un sistema de gestión de usuarios (con perfiles y roles), un panel de administración para gestionar el contenido y un diseño totalmente personalizado.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo y Responsabilidades -->
+    <section class="mb-5">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Proceso de Trabajo y Responsabilidades</h2>
+
+        <!-- Responsabilidades del Cliente -->
+        <div class="bg-info-subtle p-4 rounded-3 mb-4 border border-info-subtle">
+            <h3 class="fs-6 fw-bold text-info-emphasis mb-2">Responsabilidades del Cliente</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Se requiere una **colaboración constante**.</li>
+                <li>Las reuniones (virtuales o presenciales) son fundamentales para definir los requisitos, el flujo de pagos, los plazos de entrega y los hitos del proyecto.</li>
+            </ul>
+        </div>
+
+        <!-- Responsabilidades del Desarrollador -->
+        <div class="bg-success-subtle p-4 rounded-3 border border-success-subtle">
+            <h3 class="fs-6 fw-bold text-success-emphasis mb-2">Responsabilidades del Desarrollador</h3>
+            <ul class="list-unstyled ms-3 text-secondary small">
+                <li>Se te entregarán **avances por fases** y se te proporcionará toda la documentación necesaria del proyecto.</li>
+                <li>Se te brindará un **entrenamiento completo** para que puedas gestionar la plataforma de manera autónoma.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Aviso Importante y Condiciones de Pago (Destacado) -->
+    <section class="mb-3">
+        <h2 class="fs-4 fw-semibold text-dark mb-4 border-bottom border-2 border-secondary pb-1">Información Clave y Condiciones</h2>
+        
+        <!-- Aviso Importante -->
+        <div class="alert alert-danger mb-4" role="alert">
+            <h3 class="fw-bold fs-6 mb-1">⚠️ Importante: Cambios, Calidad de Materiales y Costos</h3>
+            <p class="small mb-2">
+                Cualquier cambio o idea nueva que se presente después de la aprobación del plan inicial generará un costo adicional y se redefinirán los plazos de entrega. Además, es crucial que las imágenes que proporciones sean de la mejor calidad posible y acordes al objetivo del proyecto. De no ser así, se deberá subcontratar a un diseñador gráfico, lo que implicará un costo adicional al presupuesto inicial.
+            </p>
+             <p class="small mb-0">
+                **Dominio y Hosting:** El pago y la gestión del dominio y hosting corren **por cuenta del cliente**. Esto es un beneficio clave, ya que te otorga el **control total** sobre tus activos digitales y tus credenciales de acceso, asegurando tu independencia futura y la portabilidad de tu proyecto.
+            </p>
+        </div>
+
+        <!-- Condiciones de Pago -->
+        <div class="p-4 bg-light rounded-3 border border-secondary">
+            <h3 class="fw-bold text-dark fs-6 mb-1">Condiciones de Pago (Por Hitos Clave)</h3>
+            <p class="text-secondary mb-0">
+                Dada la naturaleza de estos proyectos, la mejor opción es un sistema de pagos por hitos:
+                <ul class="list-unstyled ms-3 mt-2 small text-dark">
+                    <li>**30% Adelanto:** Al inicio del proyecto para comenzar el desarrollo.</li>
+                    <li>**30% Hito 2:** Al completar una fase importante (ej. la creación del panel de administración).</li>
+                    <li>**30% Hito 3:** Al terminar el desarrollo de la parte pública del sistema.</li>
+                    <li>**10% Final:** A la entrega final, pruebas, y puesta en línea del proyecto.</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+</div>
+        <!-- FIN DEL CUERPO DE LA MODAL PLAN GOLD -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--FIN DETALLES DE PLANES-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
