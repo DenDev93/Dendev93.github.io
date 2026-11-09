@@ -14,6 +14,23 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 /*================CUERPO DEL CÓDIGO=================*/
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Efecto scroll en navbar
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            // Haciendo scroll hacia abajo
+            navbar.classList.add('scrolled');
+        } else {
+            // Haciendo scroll hacia arriba o al principio
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    
     actualizarAnoDelFooter();
     configurarObservadorScroll();
     configurarScrollSuave();

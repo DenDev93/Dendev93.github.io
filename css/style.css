@@ -70,6 +70,17 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
     z-index: 1030;
 }
 
+/* Clase para cuando haga scroll */
+.navbar.scrolled {
+    background-color: rgba(10, 12, 16, 0.98);
+}
+
+/* Mantener el hover funcionando aunque tenga la clase scrolled */
+.navbar.scrolled .nav-link:hover {
+    color: var(--accent-color);
+    background-color: rgba(40, 167, 69, 0.08);
+}
+
 .navbar .container {
     display: flex;
     align-items: center;
@@ -801,4 +812,50 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
         font-size: 1.8rem;
     }
 }
+
+/*===========BOTONES FLOTANTES===========*/
+.float-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1050;
+}
+.float-whatsapp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+.float-whatsapp:hover {
+    transform: translateY(-2px);
+    background-color: #1da851;
+}
+.float-up {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+.float-up:hover {
+    transform: translateY(-2px);
+    background-color: #0056b3;
+}
+/*===========FIN BOTONES FLOTANTES===========*/
 /*===========FIN DEL FRAGMENTO DE CÓDIGO============*/
