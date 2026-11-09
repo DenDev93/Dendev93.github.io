@@ -59,11 +59,11 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 /* =======================CUERPO DEL CÓDIGO=================== */
 
 .navbar {
-    background-color: rgba(20, 22, 26, 0.85);
+    background-color: rgba(20, 22, 26, 0.65);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: var(--shadow-light);
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -72,13 +72,13 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 
 /* Clase para cuando haga scroll */
 .navbar.scrolled {
-    background-color: rgba(10, 12, 16, 0.98);
+    background-color: rgba(10, 12, 16, 0.85);
 }
 
 /* Mantener el hover funcionando aunque tenga la clase scrolled */
 .navbar.scrolled .nav-link:hover {
-    color: var(--accent-color);
-    background-color: rgba(40, 167, 69, 0.08);
+    color: #4ade80;
+    background-color: rgba(40, 167, 69, 0.12);
 }
 
 .navbar .container {
@@ -91,12 +91,12 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
     font-family: var(--font-heading);
     font-weight: 800;
     font-size: 1.8rem;
-    color: var(--dark-bg) !important;
+    color: #f8f9fa !important;
     transition: color var(--transition-speed);
 }
 
 .navbar-brand:hover {
-    color: var(--primary-color) !important;
+    color: #60a5fa !important;
 }
 
 .navbar-logo {
@@ -110,11 +110,11 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 }
 
 .texto-marca {
-    color: var(--accent-color);
+    color: #4ade80;
 }
 
 .navbar .nav-link {
-    color: var(--text-color-light);
+    color: #f8f9fa;
     font-weight: 600;
     font-size: 1.05em;
     padding: 0.5rem 1rem;
@@ -123,27 +123,10 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
     border-radius: 0.3rem;
 }
 
-.navbar .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0.25rem;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background-color: var(--accent-color);
-    transition: width var(--transition-speed);
-}
-
-.navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
-    width: calc(100% - 2rem);
-}
-
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-    color: var(--accent-color);
-    background-color: rgba(40, 167, 69, 0.08);
+    color: #4ade80;
+    background-color: rgba(40, 167, 69, 0.12);
 }
 
 .nav-cta {
@@ -495,8 +478,8 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 }
 
 .btn-marca:hover {
-    background-color: #1e7e34;
-    border-color: #1e7e34;
+    background-color: #22c55e;
+    border-color: #22c55e;
     color: #ffffff;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -516,8 +499,8 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 }
 
 .custom-btn:hover {
-    background-color: #1e7e34;
-    border-color: #1e7e34;
+    background-color: #22c55e;
+    border-color: #22c55e;
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
