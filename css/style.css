@@ -1,98 +1,79 @@
-/* Custom CSS Variables - Define tu paleta de colores y tipografía */
-:root {
-    /* Colores base para un tema oscuro elegante */
-    --primary-color: #007bff; /* Azul vibrante para acentos y elementos principales */
-    --accent-color: #28a745; /* Verde para éxito, llamados a la acción secundarios */
-    --dark-bg: #1a1a1d; /* Fondo muy oscuro, casi negro, para profundidad */
-    --light-bg: #f0f2f5; /* Fondo claro para secciones que contrasten */
-    --text-color-light: #e0e0e0; /* Texto claro sobre fondos oscuros */
-    --text-color-dark: #333; /* Texto oscuro sobre fondos claros */
-    --gradient-start: #003366; /* Azul oscuro para gradientes */
-    --gradient-end: #0a0a0a; /* Negro para gradientes */
+/*====================ENCABEZADO====================
+SECCIÓN: variables y base — tokens y reset del sitio
+ARCHIVO: css/style.css
+==================================================*/
 
-    /* Tipografía */
+/*=====================DETALLES=====================
+QUÉ HACE: define la paleta, tipografía y estilos base del portfolio.
+VINCULADO A: index.html (clases de sección), js/script.js (comportamiento).
+SI SE ALTERA: si cambia el color primario o tipografías, revisar index.html.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/*================CUERPO DEL CÓDIGO=================*/
+
+:root {
+    --primary-color: #007bff;
+    --accent-color: #28a745;
+    --dark-bg: #1a1a1d;
+    --light-bg: #f0f2f5;
+    --text-color-light: #e0e0e0;
+    --text-color-dark: #333;
+    --gradient-start: #003366;
+    --gradient-end: #0a0a0a;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
-
-    /* Transiciones y sombras */
-    --transition-speed: 0.4s ease-in-out; /* Transiciones más fluidas y perceptibles */
+    --transition-speed: 0.4s ease-in-out;
     --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
     --shadow-dark: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* Base Styles - Reseteos y estilos generales del cuerpo */
+/* ---------- BASE ---------- */
 body {
     font-family: var(--font-body);
-    line-height: 1.7; /* Mayor espacio entre líneas para legibilidad */
-    color: var(--text-color-dark); /* Color por defecto del texto */
-    background-color: var(--light-bg); /* Fondo general de la página */
+    line-height: 1.7;
+    color: var(--text-color-dark);
+    background-color: var(--light-bg);
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Prevenir scroll horizontal */
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    color: var(--text-color-dark); /* Color por defecto de los encabezados */
-    font-weight: 700; /* Más audaz */
+    color: var(--text-color-dark);
+    font-weight: 700;
     line-height: 1.2;
 }
 
-/* Global Section Styling */
-.section {
-    padding: 6rem 0; /* Más padding vertical para las secciones */
-    position: relative;
-    z-index: 2; /* Asegurar que el contenido de la sección esté sobre posibles fondos/animaciones */
-}
-.section:nth-of-type(odd) {
-    background-color: var(--light-bg); /* Alterna el fondo para un mejor contraste visual */
-}
-.section:nth-of-type(even) {
-    background-color: #ffffff; /* Otro color para alternar, si el light-bg no es suficiente */
-}
+/* ---------- NAVEGACIÓN ---------- */
+/* ===========================NAVEGACIÓN=========================== */
+/* ======================DETALLES=====================
+QUÉ HACE: barra fija con fondo oscuro translúcido y blur.
+VINCULADO A: index.html (nav, nav-link, nav-cta), js/script.js (scroll spy).
+SI SE ALTERA: si cambia el color, revisar variables :root.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
 
+/* =======================CUERPO DEL CÓDIGO=================== */
 
-/* Section Titles - Estilo unificado para todos los títulos de sección */
-.section-title {
-    font-size: 3rem; /* Títulos más grandes */
-    font-weight: 800; /* Más impacto */
-    position: relative;
-    padding-bottom: 1.5rem; /* Espacio para la línea debajo */
-    margin-bottom: 4rem; /* Margen inferior del título */
-    color: var(--text-color-dark); /* Color por defecto, ajustado por sección */
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 80px; /* Línea más ancha */
-    height: 4px; /* Línea más gruesa */
-    background: linear-gradient(to right, var(--primary-color), var(--accent-color)); /* Gradiente para la línea */
-    border-radius: 5px;
-}
-
-/* Specific Section Title Color Adjustments */
-/* Para secciones con fondo oscuro, el título debe ser claro */
-.bg-dark .section-title,
-.hero .section-title {
-    color: var(--text-color-light);
-}
-.bg-dark .section-title::after,
-.hero .section-title::after {
-    background: linear-gradient(to right, var(--text-color-light), var(--primary-color));
-}
-
-/* Navbar Custom Styles - Navegación flotante y elegante */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95); /* Fondo semitransparente por defecto */
-    box-shadow: var(--shadow-light); /* Sombra sutil para despegarla del fondo */
-    padding: 1rem 0; /* Padding vertical para la barra */
-    position: fixed; /* Fixed navbar */
+    background-color: rgba(20, 22, 26, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-light);
+    padding: 0.75rem 0;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Asegurar que esté por encima de todo */
+    z-index: 1030;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .navbar-brand {
@@ -102,154 +83,255 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--dark-bg) !important;
     transition: color var(--transition-speed);
 }
+
 .navbar-brand:hover {
     color: var(--primary-color) !important;
 }
 
-.navbar .nav-link {
-    color: var(--dark-bg);
-    font-weight: 600;
-    font-size: 1.05em;
-    padding: 0.5rem 1rem; /* Padding para los enlaces */
-    position: relative;
-    transition: all var(--transition-speed);
-    border-radius: 0.3rem; /* Ligeramente redondeados */
+.navbar-logo {
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
-/* Animación de subrayado elegante para los enlaces de navegación */
+.navbar-brand-text {
+    color: var(--text-color-light);
+}
+
+.texto-marca {
+    color: var(--accent-color);
+}
+
+.navbar .nav-link {
+    color: var(--text-color-light);
+    font-weight: 600;
+    font-size: 1.05em;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all var(--transition-speed);
+    border-radius: 0.3rem;
+}
+
 .navbar .nav-link::after {
     content: '';
     position: absolute;
-    left: 50%; /* Empezar en el centro */
-    bottom: 0.25rem; /* Separado del texto */
+    left: 50%;
+    bottom: 0.25rem;
     transform: translateX(-50%);
-    width: 0; /* Inicialmente sin ancho */
+    width: 0;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     transition: width var(--transition-speed);
 }
 
 .navbar .nav-link:hover::after,
 .navbar .nav-link.active::after {
-    width: calc(100% - 2rem); /* Ancho completo menos el padding horizontal */
+    width: calc(100% - 2rem);
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-    color: var(--primary-color);
-    background-color: rgba(0, 123, 255, 0.08); /* Fondo sutil al hacer hover */
+    color: var(--accent-color);
+    background-color: rgba(40, 167, 69, 0.08);
 }
 
-.navbar-logo {
-    height: 40px; /* Adjusts the height of the image */
-    margin-right: 10px; /* Adds space between the logo and the text */
-    vertical-align: middle; /* Aligns the image with the text */
+.nav-cta {
+    border-radius: 50px;
+    padding: 0.45rem 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
 }
 
-/* Hero Section - Primer impacto visual */
+/* ---------- HERO ---------- */
+/* ===========================HERO=========================== */
+/* ======================DETALLES=====================
+QUÉ HACE: sección hero full screen con gradiente y decoración.
+VINCULADO A: index.html (hero, hero-titulo, hero-subtitulo, hero-acciones, scroll-indicador).
+SI SE ALTERA: si cambia el gradiente, revisar variables :root.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* =======================CUERPO DEL CÓDIGO=================== */
+
 .hero {
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--gradient-start) 100%); /* Nuevo gradiente verde a azul oscuro */
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--gradient-start) 100%);
     min-height: 100vh;
-    display: flex; /* Usar flexbox para centrar contenido */
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     position: relative;
-    overflow: hidden; /* Ocultar desbordamientos del fondo animado si lo añades */
+    overflow: hidden;
     color: var(--text-color-light);
-    box-sizing: border-box; /* Asegurar que padding/border no sumen al min-height */
 }
 
+.hero-decor {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(0, 123, 255, 0.25) 0%, transparent 45%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, transparent 55%);
+    pointer-events: none;
+}
 
 .hero-content {
     max-width: 900px;
-    position: relative; /* Asegurar que el contenido esté sobre el fondo animado */
+    position: relative;
     z-index: 2;
 }
 
-.hero h1 {
-    font-size: 4.5rem; /* Título principal más grande */
-    color: var(--text-color-light);
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-    line-height: 1.1;
-    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para el texto del título */
+.hero .imagotipo {
+    width: 90%;
+    max-width: 700px;
+    animation: heroFadeUp 0.9s ease both;
 }
 
-.hero h2 {
-    font-size: 2.2rem; /* Subtítulo más grande */
-    color: white;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.impact-text {
-    font-size: 1.5rem; /* Texto de impacto más grande */
-    line-height: 1.7;
-    max-width: 750px;
-    margin: 0 auto 3rem auto;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300; /* Ligeramente más delgado para elegancia */
-}
-
-/* Estilos para el nuevo imagotipo */
-.hero-content .imagotipo {
-    width: 90%; /* Ancho responsive */
-    max-width: 700px; /* Limita el tamaño en pantallas grandes */
-}
-
-/* Custom Button (General, para el Hero y otros lugares) */
-.custom-btn {
-    padding: 0.8rem 2.5rem; /* Mayor padding para botones */
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 50px; /* Botones más redondeados (pill-shaped) */
-    text-transform: uppercase; /* Texto en mayúsculas */
+.hero-titulo {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
     letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    transition: all var(--transition-speed);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: heroFadeUp 0.9s ease 0.15s both;
 }
 
-.custom-btn:hover {
-    background-color: #0056b3; /* Tono más oscuro de primary */
-    border-color: #0056b3;
-    transform: translateY(-5px); /* Elevación más pronunciada */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+.hero-subtitulo {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    font-weight: 300;
+    animation: heroFadeUp 0.9s ease 0.3s both;
 }
 
-/* About Section Profile Card - Tarjeta de perfil más sofisticada */
+.hero-acciones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: heroFadeUp 0.9s ease 0.45s both;
+}
+
+.scroll-indicador {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 14px;
+    z-index: 2;
+}
+
+.scroll-indicador-punta {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 2px;
+    animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+/* ---------- SECCIONES COMUNES ---------- */
+/* =========================SECCIONES========================= */
+/* =====================DETALLES=====================
+QUÉ HACE: estilos comunes de títulos y subtítulos de sección.
+VINCULADO A: index.html (#about, #portfolio, #planes, #contact).
+SI SE ALTERA: si cambia el tamaño del título, revisar media queries.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.section {
+    padding: 6rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.section-titulo {
+    font-size: 3rem;
+    font-weight: 800;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 4rem;
+    color: var(--text-color-dark);
+}
+
+.section-titulo::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 5px;
+}
+
+.section-subtitulo {
+    font-size: 1.25rem;
+    color: var(--text-color-dark);
+    opacity: 0.75;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+}
+
+/* ---------- ABOUT ---------- */
+/* =========================ABOUT=========================== */
+/* =====================DETALLES=====================
+QUÉ HACE: tarjeta de perfil del desarrollador.
+VINCULADO A: index.html (#about, .profile-card, .profile-photo).
+SI SE ALTERA: si cambia el tamaño de la foto, revisar responsive.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
 .profile-card {
     background-color: #ffffff;
-    border-top: 6px solid var(--primary-color); /* Borde superior más grueso */
-    border-radius: 1rem; /* Bordes más redondeados para la tarjeta */
-    box-shadow: var(--shadow-light); /* Sombra suave */
+    border-top: 6px solid var(--primary-color);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-light);
     padding: 2.5rem;
-    text-align: center; /* Centrado general del contenido */
+    text-align: center;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .profile-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-dark); /* Sombra más intensa al pasar el cursor */
+    box-shadow: var(--shadow-dark);
 }
 
 .profile-photo {
-    width: 200px; /* Foto de perfil un poco más grande */
+    width: 200px;
     height: 200px;
     object-fit: cover;
     object-position: 50% 12%;
-    border-radius: 50%; /* Circular */
-    border: 5px solid var(--primary-color); /* Borde de color primario */
-    box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.2); /* Aro exterior sutil */
-    margin-bottom: 2rem; /* Espacio debajo de la foto */
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 0 8px rgba(0, 123, 255, 0.2);
+    margin-bottom: 2rem;
     transition: all var(--transition-speed);
 }
 
 .profile-photo:hover {
     transform: scale(1.05);
-    border-color: var(--accent-color); /* Cambia el color del borde al pasar el cursor */
+    border-color: var(--accent-color);
 }
 
 .profile-card h3 {
@@ -261,90 +343,49 @@ h1, h2, h3, h4, h5, h6 {
 .profile-card p {
     font-size: 1.1rem;
     color: var(--text-color-dark);
-    text-align: justify; /* Mantiene la justificación para el párrafo largo */
+    text-align: justify;
 }
 
-/* Skills Section Custom Styles - Tarjetas de habilidad modernas y botones interactivos */
-.skill-category-container {
-    padding: 2rem;
-    background-color: #ffffff; /* Fondo claro para cada categoría */
-    border-radius: 1rem;
-    box-shadow: var(--shadow-light);
-    margin-bottom: 2rem;
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
+/* ---------- PORTAFOLIO ---------- */
+/* =========================PORTAFOLIO========================= */
+/* =====================DETALLES=====================
+QUÉ HACE: tarjetas de proyectos con overlay de enlace.
+VINCULADO A: index.html (#portfolio, .portfolio-item, .portfolio-media).
+SI SE ALTERA: si cambia la altura de la imagen, revisar responsive.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
 
-.skill-category-container:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-dark);
-}
+/* ========================CUERPO DEL CÓDIGO=================== */
 
-.skill-category-title {
-    font-size: 1.8rem; /* Título de categoría más grande */
-    font-weight: 700;
-    color: var(--dark-bg);
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-/* Estilos para cada "botón" de habilidad (skill-tag) */
-.skill-tag {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8em 1.6em; /* Mayor padding */
-    margin: 0.4rem; /* Mayor espacio entre botones */
-    background-color: var(--primary-color);
-    color: var(--text-color-light);
-    border: 1px solid var(--primary-color);
-    border-radius: 50px; /* Completamente redondeados (pill-shaped) */
-    font-size: 1rem; /* Tamaño de fuente ligeramente mayor */
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-speed);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-/* Efecto hover y animación para los skill-tags */
-.skill-tag:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    transform: translateY(-4px) scale(1.03); /* Ligeramente más dramático */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    color: var(--text-color-light);
-}
-
-/* Portfolio Section Custom Styles - Tarjetas de portafolio atractivas */
 .portfolio-item {
     background-color: #ffffff;
-    border-radius: 1rem; /* Bordes más redondeados */
+    border-radius: 1rem;
     box-shadow: var(--shadow-light);
-    overflow: hidden; /* Asegurar que la imagen no se salga del borde redondeado */
+    overflow: hidden;
     transition: transform var(--transition-speed), box-shadow var(--transition-speed);
 }
 
 .portfolio-item:hover {
-    transform: translateY(-10px); /* Elevación más notoria */
-    box-shadow: var(--shadow-dark); /* Sombra más oscura */
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-dark);
 }
 
 .portfolio-item img {
     width: 100%;
-    height: 280px; /* Altura de imagen ligeramente mayor para más impacto */
+    height: 280px;
     object-fit: cover;
     display: block;
-    border-bottom: 5px solid var(--primary-color); /* Borde inferior más grueso */
-    transition: border-color var(--transition-speed); /* Transición para el borde */
+    border-bottom: 5px solid var(--primary-color);
+    transition: border-color var(--transition-speed);
 }
 
 .portfolio-item:hover img {
-    border-color: var(--accent-color); /* Cambia el color del borde al hacer hover */
+    border-color: var(--accent-color);
 }
 
 .portfolio-item .card-body {
-    padding: 1.5rem; /* Más padding interno */
+    padding: 1.5rem;
 }
 
 .portfolio-item .card-title {
@@ -359,129 +400,152 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
 }
 
+.portfolio-media {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-media img {
+    transition: transform 0.6s ease, border-color var(--transition-speed);
+}
+
+.portfolio-item:hover .portfolio-media img {
+    transform: scale(1.03);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
 .custom-project-link {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
     transition: all var(--transition-speed);
-    border-radius: 0 0 1rem 0; /* Coincide con el borde redondeado de la tarjeta */
+    border-radius: 0 0 1rem 0;
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
 .custom-project-link:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-    transform: translateY(-2px); /* Ligero levantamiento en hover */
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+    transform: translateY(-2px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Section Custom Styles - Tarjetas de contacto con efecto de brillo y contraste */
-.contact-section {
-    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%); /* Fondo oscuro unificado */
+/* ---------- BOTONES ---------- */
+/* =========================BOTONES========================= */
+/* =====================DETALLES=====================
+QUÉ HACE: estilos de botones de marca del sitio.
+VINCULADO A: index.html (btn-marca, btn-outline-light, custom-btn).
+SI SE ALTERA: si cambia el color del botón, revisar variables :root.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.btn-marca {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all var(--transition-speed);
 }
 
-.contact-section .section-title,
-.contact-section .section-subtitle,
-.contact-section .form-label {
-    color: var(--text-color-light); /* Texto claro sobre fondo oscuro */
+.btn-marca:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+    color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-.contact-section .section-title::after {
+
+.custom-btn {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: all var(--transition-speed);
+}
+
+.custom-btn:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- CONTACTO ---------- */
+/* =====================CONTACTO===================== */
+/* =====================DETALLES=====================
+QUÉ HACE: estilos del formulario y tarjetas de contacto.
+VINCULADO A: index.html (#contact, .contact-form-card, .contact-item).
+SI SE ALTERA: si cambia el color del input, revisar Bootstrap overrides.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.contact-section {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+}
+
+.contact-section .section-titulo,
+.contact-section .section-subtitulo,
+.contact-section .form-label {
+    color: var(--text-color-light);
+}
+
+.contact-section .section-titulo::after {
     background: linear-gradient(to right, var(--text-color-light), var(--primary-color));
 }
 
-.contact-item {
-    background: linear-gradient(135deg, rgba(0, 50, 100, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
-    color: var(--text-color-light);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed), background var(--transition-speed);
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde un poco más visible */
-    border-radius: 1rem; /* Bordes más redondeados */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra más profunda */
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
-/* Efecto de brillo sutil en las tarjetas al pasar el cursor */
-.contact-item::before {
-    content: '';
-    position: absolute;
-    top: -50%; /* Mover el brillo para que aparezca desde más arriba */
-    left: -50%; /* Mover el brillo para que aparezca desde más a la izquierda */
-    width: 200%; /* Abarcar más área */
-    height: 200%; /* Abarcar más área */
-    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 70%); /* Más intenso y centrado en la tarjeta */
-    opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease; /* Transición más larga para el brillo */
-    transform: scale(0.5); /* Empezar más pequeño */
-    z-index: -1;
-}
-
-.contact-item:hover::before {
-    opacity: 1;
-    transform: scale(1); /* Crecer al tamaño normal */
-}
-
-.contact-item:hover {
-    transform: translateY(-12px); /* Eleva la tarjeta un poco más */
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8); /* Sombra muy profunda al pasar el cursor */
-    border-color: var(--primary-color); /* Borde primario al pasar el cursor */
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gradient-start) 100%); /* Cambia el gradiente de fondo al pasar el cursor */
-}
-
-/* Contenedor del icono para forzar el cuadrado y el estilo */
-.contact-item .card-body i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px; /* Iconos un poco más grandes */
-    height: 70px;
-    font-size: 3.2em; /* Ajusta el tamaño del icono dentro del cuadrado */
-    border: 2px solid var(--text-color-light); /* Borde inicial CLARO */
-    border-radius: 0.75rem; /* Esquinas ligeramente redondeadas para el cuadrado */
-    margin-bottom: 1.5rem; /* Más espacio debajo del icono */
-    transition: all 0.4s ease-out;
-    color: var(--text-color-light); /* Color inicial del ICONO CLARO */
-    background-color: transparent;
-}
-
-/* Colores de marca al pasar el mouse sobre el ícono */
-.contact-item .card-body i.fa-envelope:hover {
-    background-color: #DD4B39; /* Fondo rojo de email */
-    border-color: #DD4B39;
-    color: var(--text-color-light); /* Ícono blanco sobre el fondo rojo */
-}
-.contact-item .card-body i.fa-whatsapp:hover {
-    background-color: #25D366; /* Fondo verde de WhatsApp */
-    border-color: #25D366;
-    color: var(--text-color-light);
-}
-.contact-item .card-body i.fa-linkedin:hover {
-    background-color: #0077B5; /* Fondo azul de LinkedIn */
-    border-color: #0077B5;
-    color: var(--text-color-light);
-}
-.contact-item .card-body i.fa-facebook:hover {
-    background-color: #1877F2; /* Fondo azul de Facebook */
-    border-color: #1877F2;
-    color: var(--text-color-light);
-}
-
-.contact-item span.h5 {
-    font-size: 1.35em; /* Título del contacto más grande */
-    font-weight: 700;
-    color: var(--text-color-light);
-    margin-bottom: 0.75rem;
-}
-
-.contact-item p {
-    font-size: 1em; /* Texto de detalle un poco más grande */
-    color: rgba(255, 255, 255, 0.9); /* Texto más claro para mejor contraste */
-    word-break: break-all;
-    line-height: 1.4;
-}
-
-/* Estilos para el formulario de contacto */
 .contact-section .form-control {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--text-color-light);
@@ -504,17 +568,42 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent-color);
 }
 
-/* Desaparecer la barrita del título de la sección de contacto */
-#contact .section-title::after {
-    display: none;
+.contact-item {
+    background: linear-gradient(135deg, rgba(0, 50, 100, 0.95) 0%, rgba(0, 0, 0, 0.95) 100%);
+    color: var(--text-color-light);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), background var(--transition-speed);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-/* Footer - Sección final elegante */
+.contact-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--gradient-start) 100%);
+}
+
+/* ---------- FOOTER ---------- */
+/* =====================FOOTER===================== */
+/* =====================DETALLES=====================
+QUÉ HACE: pie de página con redes sociales.
+VINCULADO A: index.html (#contact, .footer, .social-footer).
+SI SE ALTERA: si cambia el color, revisar variables :root.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
 .footer {
-    border-top: 6px solid var(--primary-color); /* Borde superior más grueso */
+    border-top: 6px solid var(--primary-color);
     background-color: var(--dark-bg);
     color: var(--text-color-light);
-    padding: 3rem 0; /* Más padding vertical */
+    padding: 3rem 0;
     font-size: 0.95rem;
     text-align: center;
 }
@@ -523,159 +612,193 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Iconos del footer un poco más grandes */
+    width: 50px;
     height: 50px;
-    border-radius: 50%; /* Redondeados para el footer, si se prefiere un estilo diferente */
-    background-color: rgba(255, 255, 255, 0.08); /* Fondo sutil para el cuadrado */
-    color: var(--text-color-light); /* Icono CLARO por defecto */
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-color-light);
     transition: all 0.3s ease;
-    font-size: 2rem; /* Tamaño del icono */
+    font-size: 2rem;
     margin: 0 0.6rem;
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto hover y colores de marca en el footer */
 .social-footer a:hover {
-    transform: translateY(-5px) scale(1.15); /* Elevación y crecimiento más pronunciados */
+    transform: translateY(-5px) scale(1.15);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    color: var(--text-color-light) !important; /* Ícono blanco/claro */
-    /* Aquí los colores de fondo y borde se definen por cada icono */
+    color: var(--text-color-light) !important;
 }
 
-/* Colores de redes sociales en el footer al pasar el cursor (Asegúrate de que tus <i> tengan la clase fab) */
-.social-footer a .fab.fa-github:hover {
-    background-color: #6e5494; /* GitHub morado oscuro */
-    border-color: #6e5494; /* Añadir borde para consistencia si lo deseas */
-}
-.social-footer a .fab.fa-linkedin:hover {
-    background-color: #0077B5; /* LinkedIn azul */
-    border-color: #0077B5;
-}
-.social-footer a .fab.fa-facebook:hover {
-    background-color: #1877F2; /* Facebook azul */
-    border-color: #1877F2;
+.social-footer a .bi-github:hover {
+    background-color: #6e5494;
+    border-color: #6e5494;
 }
 
-/* Media Queries (Responsive Design) - Asegurando la espectacularidad en todos los dispositivos */
-@media (max-width: 1200px) {
-    .hero h1 {
-        font-size: 3.8rem;
+.social-footer a .bi-linkedin:hover {
+    background-color: #0077b5;
+    border-color: #0077b5;
+}
+
+.social-footer a .bi-facebook:hover {
+    background-color: #1877f2;
+    border-color: #1877f2;
+}
+
+/* ---------- PLANES ---------- */
+/* =====================PLANES===================== */
+/* =====================DETALLES=====================
+QUÉ HACE: estilos de tarjetas y ficha de planes.
+VINCULADO A: index.html (#planes, .plan-card, .detalle-ficha-item).
+SI SE ALTERA: si cambia el padding, revisar responsive.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.detalle-ficha-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.detalle-ficha-label {
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 160px;
+}
+
+.detalle-check {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* ---------- KEYFRAMES ---------- */
+/* =========================KEYFRAMES===================== */
+/* =====================DETALLES=====================
+QUÉ HACE: animaciones de entrada y scroll del sitio.
+VINCULADO A: css/style.css (hero, scroll-indicador).
+SI SE ALTERA: si cambia la duración, revisar respeto a prefers-reduced-motion.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
-    .hero h2 {
-        font-size: 1.9rem;
-    }
-    .impact-text {
-        font-size: 1.3rem;
-    }
-    .section-title {
-        font-size: 2.8rem;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
+@keyframes scrollDot {
+    0% {
+        opacity: 1;
+        top: 6px;
+    }
+    70% {
+        opacity: 0;
+        top: 16px;
+    }
+    100% {
+        opacity: 0;
+        top: 16px;
+    }
+}
+
+/* ---------- RESPONSIVE ---------- */
+/* =====================RESPONSIVE===================== */
+/* =====================DETALLES=====================
+QUÉ HACE: ajustes de layout para tablets y celulares.
+VINCULADO A: css/style.css (hero, portfolio, form, navbar).
+SI SE ALTERA: si cambia el breakpoint, revisar otros bloques.
+FECHA: 2026-11-09 | LUGAR: Managua, Managua
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
 
 @media (max-width: 991.98px) {
-    .hero h1 {
-        font-size: 3rem;
+    .section {
+        padding: 4rem 0;
     }
-    .hero h2 {
-        font-size: 1.6rem;
-    }
-    .impact-text {
-        font-size: 1.2rem;
-    }
-    .section-title {
+
+    .section-titulo {
         font-size: 2.5rem;
+        margin-bottom: 3rem;
     }
+
     .profile-photo {
         width: 180px;
         height: 180px;
     }
+
     .portfolio-item img {
         height: 220px;
     }
+
     .contact-item .card-body i {
         width: 60px;
         height: 60px;
         font-size: 2.5em;
     }
-    .social-footer a {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-    }
 }
 
 @media (max-width: 767.98px) {
     .section {
-        padding: 4rem 0; /* Menos padding en móviles */
+        padding: 3rem 0;
     }
-    .hero h1 {
-        font-size: 2.5rem;
-        letter-spacing: 1px;
-    }
-    .hero h2 {
-        font-size: 1.4rem;
-    }
-    .impact-text {
-        font-size: 1.1rem;
-    }
-    .section-title {
+
+    .section-titulo {
         font-size: 2.2rem;
         margin-bottom: 3rem;
     }
+
     .profile-photo {
         width: 150px;
         height: 150px;
         border-width: 4px;
-        box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.2);
     }
-    .skill-category-title {
-        font-size: 1.5rem;
-    }
-    .skill-tag {
-        font-size: 0.9rem;
-        padding: 0.7em 1.3em;
-    }
+
     .portfolio-item img {
         height: 180px;
     }
+
     .contact-item .card-body i {
         width: 55px;
         height: 55px;
         font-size: 2.2em;
         border-width: 1px;
     }
-    .contact-item span.h5 {
-        font-size: 1.2em;
+
+    .contact-form-card {
+        padding: 1.5rem;
     }
-    .contact-item p {
-        font-size: 0.85em;
+
+    .detalle-ficha-item {
+        flex-direction: column;
+        gap: 0.25rem;
     }
-    .social-footer a {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3rem;
-        margin: 0 0.4rem;
+
+    .detalle-ficha-label {
+        min-width: 0;
     }
 }
 
 @media (max-width: 575.98px) {
-    .hero h1 {
-        font-size: 2rem;
+    .hero-acciones .btn {
+        width: 100%;
+        max-width: 320px;
     }
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-    .impact-text {
-        font-size: 1rem;
-    }
-    .section-title {
+
+    .section-titulo {
         font-size: 1.8rem;
     }
-    .custom-btn {
-        padding: 0.7rem 2rem;
-        font-size: 1rem;
-    }
-    .portfolio-item img {
-        height: 150px;
-    }
 }
+/*===========FIN DEL FRAGMENTO DE CÓDIGO============*/

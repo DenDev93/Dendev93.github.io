@@ -1,0 +1,13 @@
+# Variables de entorno con secretos (NO subir al repositorio)
+.env
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Artefactos de Playwright (verificacion visual)
+
+.playwright-mcp/
