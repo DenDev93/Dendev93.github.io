@@ -113,6 +113,22 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
     color: #4ade80;
 }
 
+/* ---------- LOGO: LETRAS D EN BLANCO ---------- */
+/* =====================DETALLES=====================
+QUÉ HACE: fuerza a blanco puro las dos D del logo del navbar, sin tocar
+    el resto de las letras (en gris claro y verde).
+VINCULADO A: index.html (navbar, .navbar-brand-text, .texto-marca).
+SI SE ALTERA: si se quita la clase, las D vuelven a heredar sus colores.
+FECHA: 2026-11-10 | LUGAR: Ocotal, Nueva Segovia
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.navbar-brand-text .letra-d-logo {
+    color: #ffffff;
+}
+
 .navbar .nav-link {
     color: #f8f9fa;
     font-weight: 600;
@@ -669,7 +685,7 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 }
 
 /* ---------- PRECIO EN CÓRDOBAS ---------- */
-/* =====================DETALLES===================== */
+/* =====================DETALLES=====================
 QUÉ HACE: estilo de la línea de córdobas bajo cada precio y la nota de
     mantenimiento mensual al pie de la sección de planes.
 VINCULADO A: index.html (#planes, .precio-cordobas, .nota-mantenimiento),
@@ -677,7 +693,7 @@ VINCULADO A: index.html (#planes, .precio-cordobas, .nota-mantenimiento),
 SI SE ALTERA: si cambia el fondo de la sección, revisar contraste de la nota.
 FECHA: 2026-11-09 | LUGAR: Ocotal, Nueva Segovia
 ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
-================================================== */
+==================================================*/
 
 /* ========================CUERPO DEL CÓDIGO=================== */
 
