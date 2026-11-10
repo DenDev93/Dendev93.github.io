@@ -668,6 +668,36 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
     align-items: flex-start;
 }
 
+/* ---------- PRECIO EN CÓRDOBAS ---------- */
+/* =====================DETALLES===================== */
+QUÉ HACE: estilo de la línea de córdobas bajo cada precio y la nota de
+    mantenimiento mensual al pie de la sección de planes.
+VINCULADO A: index.html (#planes, .precio-cordobas, .nota-mantenimiento),
+    js/script.js (actualizarPreciosEnCordobas llena .precio-cordobas).
+SI SE ALTERA: si cambia el fondo de la sección, revisar contraste de la nota.
+FECHA: 2026-11-09 | LUGAR: Ocotal, Nueva Segovia
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+================================================== */
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.precio-cordobas {
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 1.2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.nota-mantenimiento {
+    max-width: 720px;
+    margin: 3rem auto 0;
+    padding: 1rem 1.5rem;
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+}
+
 /* ---------- KEYFRAMES ---------- */
 /* =========================KEYFRAMES===================== */
 /* =====================DETALLES=====================

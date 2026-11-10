@@ -4,10 +4,12 @@ ARCHIVO: js/script.js
 ==================================================*/
 
 /*=====================DETALLES=====================
-QUÉ HACE: maneja año del footer, scroll spy, scroll suave y envío del formulario.
-SIN VÍNCULOS EXTERNOS.
-SI SE ALTERA: si cambia el endpoint del formulario, revisar el handler.
-FECHA: 2026-11-09 | LUGAR: Managua, Managua
+QUÉ HACE: maneja año del footer, scroll spy, scroll suave, envío del formulario
+    y conversión de precios a córdobas con la tasa oficial del BCN.
+VINCULADO A: index.html (#planes con data-usd, footer, navbar, formularios).
+SI SE ALTERA: si cambia el endpoint del formulario o la tasa del BCN, revisar
+    el handler y actualizarPreciosEnCordobas().
+FECHA: 2026-11-09 | LUGAR: Ocotal, Nueva Segovia
 ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 ==================================================*/
 
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarObservadorScroll();
     configurarScrollSuave();
     enviarFormularioContacto();
+    actualizarPreciosEnCordobas();
 });
 
 /*===========FIN DEL FRAGMENTO DE CÓDIGO============*/
@@ -191,6 +194,49 @@ async function enviarFormularioContacto() {
                 confirmButtonColor: '#dc3545'
             });
         }
+    });
+}
+
+/*===========FIN DEL FRAGMENTO DE CÓDIGO============*/
+
+/*=====================DETALLES=====================
+QUÉ HACE: muestra el equivalente en córdobas bajo el precio en dólares de cada
+    tarjeta de planes, con la tasa oficial del BCN del mes vigente.
+VINCULADO A: index.html (#planes, atributos data-usd, .precio-cordobas).
+SI SE ALTERA: actualizar TASA_OFICIAL_BCN y PERIODO_TASA_BCN cada mes con la
+    publicación del BCN; sin data-usd la tarjeta queda solo en dólares.
+FECHA: 2026-11-09 | LUGAR: Ocotal, Nueva Segovia
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/*================CUERPO DEL CÓDIGO=================*/
+
+function actualizarPreciosEnCordobas() {
+    // Tasa oficial del Banco Central de Nicaragua (crawling peg: publicada por mes).
+    const TASA_OFICIAL_BCN = 36.62;
+    const PERIODO_TASA_BCN = 'noviembre 2026';
+
+    const preciosEnUsd = document.querySelectorAll('#planes [data-usd]');
+
+    if (preciosEnUsd.length === 0 || typeof Intl === 'undefined' || !Intl.NumberFormat) {
+        return;
+    }
+
+    const formatoCordobas = new Intl.NumberFormat('es-NI', {
+        style: 'currency',
+        currency: 'NIO',
+        maximumFractionDigits: 0
+    });
+
+    preciosEnUsd.forEach((precio) => {
+        const montoEnUsd = Number(precio.getAttribute('data-usd'));
+        const lineaCordobas = precio.parentElement.querySelector('.precio-cordobas');
+
+        if (!Number.isFinite(montoEnUsd) || lineaCordobas === null) {
+            return;
+        }
+
+        lineaCordobas.textContent = `≈ ${formatoCordobas.format(montoEnUsd * TASA_OFICIAL_BCN)} · TC oficial BCN, ${PERIODO_TASA_BCN}`;
     });
 }
 
