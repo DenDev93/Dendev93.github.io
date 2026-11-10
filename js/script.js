@@ -4,12 +4,13 @@ ARCHIVO: js/script.js
 ==================================================*/
 
 /*=====================DETALLES=====================
-QUÉ HACE: maneja año del footer, scroll spy, scroll suave, envío del formulario
-    y conversión de precios a córdobas con la tasa oficial del BCN.
-VINCULADO A: index.html (#planes con data-usd, footer, navbar, formularios).
+QUÉ HACE: maneja año del footer, scroll spy, scroll suave, envío del formulario,
+    conversión de precios a córdobas con la tasa oficial del BCN y ocultado del
+    botón "Hablemos" cuando el navbar está sobre la sección de contacto.
+VINCULADO A: index.html (#planes con data-usd, #contact, .nav-cta, footer, navbar, formularios).
 SI SE ALTERA: si cambia el endpoint del formulario o la tasa del BCN, revisar
     el handler y actualizarPreciosEnCordobas().
-FECHA: 2026-11-09 | LUGAR: Ocotal, Nueva Segovia
+FECHA: 2026-11-10 | LUGAR: Ocotal, Nueva Segovia
 ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
 ==================================================*/
 
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     configurarScrollSuave();
     enviarFormularioContacto();
     actualizarPreciosEnCordobas();
+    configurarOcultarBotonHablemos();
 });
 
 /*===========FIN DEL FRAGMENTO DE CÓDIGO============*/
@@ -238,6 +240,41 @@ function actualizarPreciosEnCordobas() {
 
         lineaCordobas.textContent = `≈ ${formatoCordobas.format(montoEnUsd * TASA_OFICIAL_BCN)} · TC oficial BCN, ${PERIODO_TASA_BCN}`;
     });
+}
+
+/*===========FIN DEL FRAGMENTO DE CÓDIGO============*/
+
+/*=====================DETALLES=====================
+QUÉ HACE: desvanece el botón "Hablemos" del navbar mientras la franja del
+    navbar esté sobre la sección de contacto; reaparece al salir de ella.
+VINCULADO A: index.html (#contact, .nav-cta), css/style.css (.nav-cta-oculto).
+SI SE ALTERA: si cambia la altura del navbar o el id de la sección, la
+    franja se recalcula sola; sin .nav-cta el botón queda siempre visible.
+FECHA: 2026-11-10 | LUGAR: Ocotal, Nueva Segovia
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/*================CUERPO DEL CÓDIGO=================*/
+
+function configurarOcultarBotonHablemos() {
+    const seccionContacto = document.getElementById('contact');
+    const botonHablemos = document.querySelector('.nav-cta');
+    const navbar = document.querySelector('.navbar');
+
+    if (!seccionContacto || !botonHablemos || !navbar) {
+        return;
+    }
+
+    const evaluarPosicionDelNavbar = () => {
+        const bordeInferiorNavbar = window.pageYOffset + navbar.offsetHeight;
+        const tocaSeccionContacto = bordeInferiorNavbar >= seccionContacto.offsetTop
+            && bordeInferiorNavbar <= seccionContacto.offsetTop + seccionContacto.offsetHeight;
+        botonHablemos.classList.toggle('nav-cta-oculto', tocaSeccionContacto);
+    };
+
+    window.addEventListener('scroll', evaluarPosicionDelNavbar, { passive: true });
+    // Evaluación inicial: cubre recargas a mitad de página sin evento de scroll.
+    evaluarPosicionDelNavbar();
 }
 
 /*===========FIN DEL FRAGMENTO DE CÓDIGO============*/

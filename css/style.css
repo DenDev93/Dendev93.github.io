@@ -154,6 +154,25 @@ ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
     font-size: 0.85rem;
 }
 
+/* ---------- CTA HABLEMOS: OCULTO SOBRE CONTACTO ---------- */
+/* =====================DETALLES=====================
+QUÉ HACE: desvanece el botón "Hablemos" del navbar mientras la franja del
+    navbar esté sobre la sección de contacto (la clase la togglea script.js).
+VINCULADO A: js/script.js (configurarOcultarBotonHablemos), index.html (.nav-cta).
+SI SE ALTERA: si se cambia la duración del fade, revisar sensación de parpadeo.
+FECHA: 2026-11-10 | LUGAR: Ocotal, Nueva Segovia
+ESCRITO POR: ING. DENIS MANUEL LÓPEZ MOLINA.
+==================================================*/
+
+/* ========================CUERPO DEL CÓDIGO=================== */
+
+.navbar .nav-cta.nav-cta-oculto {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
 /* ---------- HERO ---------- */
 /* ===========================HERO=========================== */
 /* ======================DETALLES=====================
